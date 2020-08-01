@@ -11,7 +11,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build and Publish to Dockerhub
-       run: docker build . --file Dockerfile --tag latest:$(date +%s)
+      run: docker build . --file Dockerfile --tag latest:$(date +%s)
         
     - name: send telegram message
       run: |
